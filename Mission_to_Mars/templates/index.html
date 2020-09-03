@@ -24,11 +24,11 @@
     <hr>
 
     <div class="row">
-      <div class="col-sm-6 col-md-8">
+      <div class="col-sm-4 col-md-8">
         <h2><strong>Mars Featured Image</strong></h2>
         <img src={{ Mars_data.Featured_image }} alt="Featured Image" width="100%" height="100%">
       </div>
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-8 col-md-4">
         <h4><strong>Mars Facts</strong></h4>
         <p style="border-color: black;">{{Mars_data.Facts|safe}}</p>
       </div>
@@ -39,14 +39,14 @@
       <h2><strong>Mars Hemispheres</strong></h2>
       
       {% for hemisphere in Mars_data.Hemispheres%}
-      <div class="col-md-6" style="border-color: black;">
+      <div class="col-sm-3 col-md-6" style="border-color: black;">
         <div class="thumbnail">
           <img src='{{ hemisphere.img_url}}' alt={{hemisphere.img_url}}>
         </div>
-        <hr>
         <div>
           <h3><strong>{{hemisphere.Title}}</strong></h3>
         </div>
+        <hr>
       </div>
       {% endfor %}
     </div>
